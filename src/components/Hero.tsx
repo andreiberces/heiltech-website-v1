@@ -13,7 +13,7 @@ const FADE_UP = {
   visible: (d = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 100, damping: 22, delay: d },
+    transition: { type: "spring" as const, stiffness: 100, damping: 22, delay: d },
   }),
 };
 
@@ -116,7 +116,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.4 }}
+          transition={{ type: "spring" as const, stiffness: 80, damping: 20, delay: 0.4 }}
           className="lg:col-span-5 hidden lg:flex justify-end"
         >
           <div className="relative w-[420px]">

@@ -101,7 +101,7 @@ export default function Footer() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
-                transition={{ type: "spring", stiffness: 100, damping: 22 }}
+                transition={{ type: "spring" as const, stiffness: 100, damping: 22 }}
                 className="font-sans font-black tracking-tighter leading-none text-[clamp(2rem,4vw,3.5rem)] text-zinc-50 mb-4"
               >
                 READY TO

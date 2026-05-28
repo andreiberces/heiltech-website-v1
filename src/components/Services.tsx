@@ -34,7 +34,7 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 22 } },
+  show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 100, damping: 22 } },
 };
 
 export default function Services() {
@@ -53,7 +53,7 @@ export default function Services() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
-          transition={{ type: "spring", stiffness: 100, damping: 22 }}
+          transition={{ type: "spring" as const, stiffness: 100, damping: 22 }}
           className="font-sans font-black tracking-tighter leading-none text-[clamp(2.2rem,4.5vw,4rem)] text-zinc-50 mb-16"
         >
           ACTIVE
@@ -92,7 +92,7 @@ function ServiceCard({
     <motion.div
       variants={{
         hidden: { opacity: 0, y: 24 },
-        show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 22 } },
+        show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 100, damping: 22 } },
       }}
       whileHover="hovered"
       className={`group relative bg-surface flex flex-col ${service.large ? "p-10 min-h-[480px]" : "p-8 min-h-[240px]"} ${className}`}
@@ -102,7 +102,7 @@ function ServiceCard({
         variants={{ hovered: { scaleY: 1 }, hidden: { scaleY: 0 }, show: { scaleY: 0 } }}
         className="absolute top-0 left-0 w-0.5 h-full bg-crimson origin-top"
         style={{ scaleY: 0 }}
-        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        transition={{ type: "spring" as const, stiffness: 300, damping: 30 }}
       />
 
       {/* Code */}
@@ -116,7 +116,7 @@ function ServiceCard({
             hidden: { opacity: 0, x: -8 },
             show: { opacity: 0, x: -8 },
           }}
-          transition={{ type: "spring", stiffness: 200, damping: 20 }}
+          transition={{ type: "spring" as const, stiffness: 200, damping: 20 }}
         >
           <ArrowUpRight size={16} className="text-crimson" />
         </motion.div>

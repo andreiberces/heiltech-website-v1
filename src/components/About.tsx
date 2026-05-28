@@ -8,7 +8,7 @@ const FADE_UP = (delay = 0) => ({
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 100, damping: 22, delay },
+    transition: { type: "spring" as const, stiffness: 100, damping: 22, delay },
   },
 });
 
@@ -29,7 +29,7 @@ export default function About() {
             initial={{ opacity: 0, x: -32 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ type: "spring", stiffness: 80, damping: 20 }}
+            transition={{ type: "spring" as const, stiffness: 80, damping: 20 }}
             className="lg:col-span-5 relative"
           >
             <div className="relative aspect-[4/5] overflow-hidden">

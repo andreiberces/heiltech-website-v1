@@ -18,7 +18,7 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 22 } },
+  show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 100, damping: 22 } },
 };
 
 export default function Certifications() {
@@ -39,7 +39,7 @@ export default function Certifications() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ type: "spring", stiffness: 100, damping: 22 }}
+              transition={{ type: "spring" as const, stiffness: 100, damping: 22 }}
               className="font-sans font-black tracking-tighter leading-none text-[clamp(2rem,3.5vw,3.2rem)] text-zinc-50"
             >
               COMPLIANCE
@@ -50,7 +50,7 @@ export default function Certifications() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ type: "spring", stiffness: 100, damping: 22, delay: 0.1 }}
+              transition={{ type: "spring" as const, stiffness: 100, damping: 22, delay: 0.1 }}
               className="mt-6 text-sm leading-relaxed text-zinc-500 max-w-[38ch]"
             >
               Every engagement is verified against industry-leading compliance standards —
