@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 66" fill="none">
+  <!-- Shield body with two top decorative points -->
+  <path d="M28 6 L23 6 L19 1 L14 6 L9 9 L7 15 L7 41 Q7 57 28 65 Q49 57 49 41 L49 15 L47 9 L42 6 L37 1 L33 6 Z"
+    fill="#c01c1c" stroke="rgba(255,255,255,0.55)" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Inner circle ring -->
+  <circle cx="28" cy="40" r="15.5" stroke="white" stroke-width="2" fill="none"/>
+  <!-- HT monogram -->
+  <text x="28" y="47" text-anchor="middle"
+    font-family="Arial Black, Impact, sans-serif"
+    font-weight="900" font-size="15" fill="white" letter-spacing="-1">HT</text>
+</svg>
